@@ -1,5 +1,20 @@
-# README for Evaluating This Model
+#Overview
 
+This project reproduces the study presented in the paper Adversarial Representation Learning for Robust Patient-Independent Epileptic Seizure Detection by Zhang et al. (arXiv:1909.10868). The research aims to enhance the robustness of epileptic seizure detection using non-invasive EEG signals through adversarial deep learning. The reproduction focuses on evaluating the reproducibility of their results and understanding the underlying methodologies.
+
+#Contents
+
+Original Research Paper: Link to Paper
+
+Original Author's Code: GitHub Repository
+
+Reproduced Code: Provided in main_v1.py and preprocess.py
+
+Environment Specification: environment.yml and requirements.txt
+
+Dataset Source: Temple University Hospital EEG Corpus
+
+#Instructions
 1. Steps for Preprocessing Data
 
 - Download 14 edf patient data.
@@ -41,7 +56,7 @@
 - Running Evaluation Code
 - Evaluation is also done in the same file. In your Terminal, please enter python author_main_v1.py. Your results, including test accuracy rate and training accuracy rate, will be stored in ./results and ./result.csv.
 
-5. Table of results
+#Table of results
    | Model Hyperparameter Description | Average Training Accuracy | Average Testing Accuracy | Average Testing AE Cost | Average Diagnosis Model Testing Cross Entropy | Total Training Cost | Training AE Cost | Person Detection Cross Entropy | Diagnosis Model Cross Entropy |
    |------------------------------------------------------------------------------|---------------------------|--------------------------|--------------------------|------------------------------------------------|---------------------|------------------|--------------------------------|--------------------------------|
    | Our Own Data with Original Hyperparameters | 0.5021157659 | 0.4965775578 | 0.2387831375 | 6.972470323 | 12.84448104 | 0.2408124713 | 6.951138047 | 2.565816404 |
