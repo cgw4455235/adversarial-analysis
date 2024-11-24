@@ -1,21 +1,17 @@
-# Overview
-
+# 🚀 Overview 
 Epileptic seizure detection is a critical field in medical diagnostics, offering life-saving potential through early and accurate identification of seizures. This project reproduces and extends the findings of the seminal work "Adversarial Representation Learning for Robust Patient-Independent Epileptic Seizure Detection". The research tackles a profound challenge in healthcare: creating a patient-independent model that generalizes across individuals, eliminating reliance on personalized historical data. Leveraging advanced deep learning techniques, adversarial training, and attention mechanisms, this study unlocks new possibilities for scalable, real-world deployment of seizure detection systems. This reproduction not only validates the original work but also enhances its reproducibility by offering detailed documentation, streamlined implementation, and extensive insights into the nuances of the methodology. This project provides a compelling blend of the technical intersection of healthcare and cutting-edge machine learning.
   
-# Contents
+# 📚 Contents
 
-Original Research Paper: Link to Paper
+- **Original Research Paper**: [Link to Paper](https://arxiv.org/abs/1909.10868)
+- **Original Author's Code**: [GitHub Repository](https://github.com/xiangzhang1015/adversarial_seizure_detection)
+- **Reproduced Code**: Provided in `main_v1.py` and `preprocess.py`
+- **Environment Specification**: See `environment.yml` and `requirements.txt`
+- **Dataset Source**: [Temple University Hospital EEG Corpus](https://isip.piconepress.com/projects/tuh_eeg/html/downloads.shtml)
 
-Original Author's Code: GitHub Repository
+# 🛠️ Instructions
 
-Reproduced Code: Provided in main_v1.py and preprocess.py
-
-Environment Specification: environment.yml and requirements.txt
-
-Dataset Source: Temple University Hospital EEG Corpus
-
-# Instructions
-## Steps for Preprocessing Data
+## 🧪 Steps for Preprocessing Data
 
 - Download 14 edf patient data.
 - Create a list of directories in txt.
@@ -23,14 +19,14 @@ Dataset Source: Temple University Hospital EEG Corpus
 - run the following command in your terminal
   - python half_half_advanced_manual_preprocess.py
 
-# Data Download Instruction
+# 📥 Data Download Instructions
 
 - To download EEG data, please request access from [Temple University EEG Corpus](https://isip.piconepress.com/projects/tuh_eeg/html/downloads.shtml)
 - After obtaining access to Temple University EEG Corpus, find and download the list of seizure-present data as a txt file.
 - Run this command to download all the data
   - rsync -auxvL --files-from=./EEG_files_with_seizures_list.txt REQUESTED_USERNAME@www.isip.piconepress.com:data/eeg /YOUR_LOCAL_DIRECTORY 
 
-# Specification of dependencies
+# 🧩 Specification of Dependencies
 
 - requirements.txt is included for installing dependencies
 - environment.yml is provided for activating Anacaonda environments.
@@ -44,7 +40,7 @@ Dataset Source: Temple University Hospital EEG Corpus
   - pip install sklearn
   - pip install tensorflow==1.5.0
 
-# Training code
+# 🏋️ Training Code
    Running Training Code
 
 - In your Terminal, please enter python author_main_v1.py
@@ -56,7 +52,7 @@ Dataset Source: Temple University Hospital EEG Corpus
 - Running Evaluation Code
 - Evaluation is also done in the same file. In your Terminal, please enter python author_main_v1.py. Your results, including test accuracy rate and training accuracy rate, will be stored in ./results and ./result.csv.
 
-# Table of results
+# 📊 Table of Results
    | Model Hyperparameter Description | Average Training Accuracy | Average Testing Accuracy | Average Testing AE Cost | Average Diagnosis Model Testing Cross Entropy | Total Training Cost | Training AE Cost | Person Detection Cross Entropy | Diagnosis Model Cross Entropy |
    |------------------------------------------------------------------------------|---------------------------|--------------------------|--------------------------|------------------------------------------------|---------------------|------------------|--------------------------------|--------------------------------|
    | Our Own Data with Original Hyperparameters | 0.5021157659 | 0.4965775578 | 0.2387831375 | 6.972470323 | 12.84448104 | 0.2408124713 | 6.951138047 | 2.565816404 |
@@ -69,7 +65,7 @@ Dataset Source: Temple University Hospital EEG Corpus
    | decay=0.7 | 0.5017236702 | 0.4967736264 | 0.2928191495 | 6.96737065 | 12.89364802 | 0.2910375515 | 6.942397582 | 2.580484584 |
    | Random Seizure Interval Composition (Our Own Dataset, failed at 8th Subject) | 0.5319346195 | 0.528475 | 0.0559582993 | 11.4685816 | 4.93997344 | 0.07415821718 | 3.285945508 | 0.1159703172 |
 
-# Dependencies
+# 📦 Dependencies
 
 - ca-certificates=2022.3.29=hecd8cb5_0
 - certifi=2020.6.20=pyhd3eb1b0_3
@@ -107,7 +103,7 @@ Dataset Source: Temple University Hospital EEG Corpus
   - werkzeug==1.0.1
   - zipp==1.2.0
 
-# Reference
+# 🔗 References
 
 - The EEG dataset can be accessed [here via request](https://isip.piconepress.com/projects/tuh_eeg/html/downloads.shtml)
 - The author's original code is available [here](https://github.com/xiangzhang1015/adversarial_seizure_detection)
